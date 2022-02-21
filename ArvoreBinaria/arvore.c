@@ -205,22 +205,19 @@ void Tree_Search(TCelula *x){
         y = y->dir;
         ItemAux.chave = x->item.chave;
         Empilhar(ItemAux,&PilhaAux);
-        //printf("%d ",ItemAux.chave);
         ItemAux.chave = y->item.chave;
         Empilhar(ItemAux,&PilhaAux);
-        //printf("%d ",ItemAux.chave);
+
         if(y->esq!=NULL){
             y=y->esq;
             ItemAux.chave= y->item.chave;
-            //printf("%d ",ItemAux.chave);
             Empilhar(ItemAux,&PilhaAux);
             y= y->pai;
+
         }if(x->dir!=NULL){
             x=x->dir;
             ItemAux.chave= x->item.chave;
             Empilhar(ItemAux,&PilhaAux);
-           //printf("%d ",ItemAux.chave);
-           // x =x->pai;
         }
 
     }
@@ -290,7 +287,7 @@ TCelula* Predecessor(TCelula *x){
     }
     return y;
 }
-// Substitui subárvore enraizada no nó 'u' pela subárvore enraizada no nó 'v'.
+// Substitui subArvore enraizada no nÃ³ 'u' pela subArvore enraizada no nÃ³ 'v'.
 void Transplante(TArvore *Arvore, TCelula **u, TCelula **v){
     if ((*u)->pai == NULL)
         Arvore->raiz = (*v);
@@ -302,7 +299,7 @@ void Transplante(TArvore *Arvore, TCelula **u, TCelula **v){
         (*v)->pai = (*u)->pai;
 }
 
-// Retira um nó 'z' na árvore 'Arvore'.
+// Retira um nÃ³ 'z' na Arvore 'Arvore'.
 void Retirar(TArvore *Arvore, TCelula **z){
     if (*z == NULL){
         printf("\n>>>>> AVISO: NO' \"z\" E' NULO! <<<<<\n");
@@ -380,7 +377,7 @@ void Imprimir(TPilha *Pilha){
         Empilhar(Item,Pilha);
         printf(" %d",Item.chave);
     }
-    Liberar (&PilhaAux);// eliminar a célula cabeça
+    Liberar (&PilhaAux);// eliminar a cï¿½lula cabeï¿½a
 }
 
 void Liberar(TPilha *Pilha){
