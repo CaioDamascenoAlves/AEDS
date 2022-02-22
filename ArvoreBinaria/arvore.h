@@ -43,7 +43,7 @@ TCelula* Sucessor(TCelula *x);
 TCelula* Predecessor(TCelula *x);
 void Transplante(TArvore *Arvore, TCelula **u, TCelula **v);
 void Retirar(TArvore *Arvore, TCelula **z);
-// cabeçalho Pilha
+// cabecalho Pilha
 void FPVazia(TPilha *Pilha);
 int Vazia(TPilha Pilha);
 void Empilhar(TItem x,TPilha *Pilha);
